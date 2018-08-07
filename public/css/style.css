@@ -1,0 +1,376 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#loader-div{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%); 
+    background-color: rgba(211, 211, 211);   
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    display: none;
+}
+
+#loader{
+    width: 30px;
+    animation: loader infinite linear 600ms
+}
+#loader-text{
+    animation: loader-text infinite ease-in-out 600ms;
+    font-size: 1.1em;
+}
+@keyframes loader{
+    from{
+      transform : rotate(0);  
+    }
+    to{
+        transform: rotate(360deg)
+    }
+}
+@keyframes loader-text {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+#message-box{
+    position: fixed;
+    left : 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    background-color:lightgrey;
+    padding: 20px;
+    width : 300px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    display: none;
+}
+
+
+.img-width{
+    width: 35%; 
+}
+.right-align{
+    text-align: right;
+}
+.hide-btn{
+    display: none;
+}
+.disp-none{
+    display: none;
+}
+.delete-btn{
+    width: 70%;
+}
+/************** Header *****************/
+
+#header{
+    background-color: #1e90ff;
+    padding: 9px;
+    /* display: flex; */
+    /* align-items: center; */
+}
+#header h2{
+    color: white;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header h1{
+    color : white;
+}
+#header button{
+    max-width: max-content;
+    max-height: max-content;
+    font-size :1.2em;
+}
+
+
+
+/********************* Navbar ***********************/
+#custom-nav {
+    margin-top: 10px;
+    background-color: #1e90ff;
+    width: 300px;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    height: 100vh;
+    z-index: 1000;
+    transition: all 500ms ease-in-out;
+}
+#custom-nav ul , #custom-nav p {
+    margin-left: 10px;
+}
+#user{
+    font-weight: bold;
+    font-size: 1.3em;
+    /* display : flex;
+    justify-content: space-between; */
+}
+#custom-nav li{
+    padding: 7px;
+}
+
+
+
+
+
+#signin-form-div , #signup-form-div{
+    width: 40%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 100px;
+    margin-right: 20px;
+}
+.link{
+    font-size: 1.2em
+}
+.link a{
+    color: #22a6b3
+}
+#error-div{
+    text-align: center;
+}
+#error{
+    color: red;
+    font-size: 1.2em
+}
+
+
+
+/********************** Add Ads *************************/
+
+#ad-div{
+    border: 2px solid lightgray;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+#ad-div h3{
+    text-align: center;
+    background-color: green;
+    color: white;
+    padding: 5px;
+}
+#ad-div input[type="text"] , #ad-div input[type="number"]{
+    border: 1px solid black;
+}
+textarea{
+    border: 1px solid black;    
+    padding: 5px;
+}
+#input-groups{
+    padding: 30px;
+}
+#confirmation-msg-div{
+    margin-top: 80px;
+    background: rgba(30, 143, 255, 0.5);
+    padding: 10px;
+    display: none;
+}
+#ads-message{
+    font-size: 1.2em;
+    text-align: center;
+    display: none;
+}
+
+
+
+/***************** Ads HomePage *****************/
+
+.ads{
+    margin-top: 20px;
+}
+#ad-img-div{
+    border: 1px solid black;
+    height: 450px;
+    text-align: center;
+    overflow: hidden;
+}
+#ad-img-div img{
+    width: 100%;
+    height: 100%;
+}
+.list{
+    width: 100%;
+}
+.list li{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    font-size: 1.1em;
+}
+.list li span:first-child{
+    color: red;
+}
+#search-result span{
+    font-weight: bold
+}
+#search-result img{
+    margin-left: 20px;
+    cursor: pointer;
+}
+#offline-msg-div{
+    display: none;
+    text-align: center;
+}
+
+/****************** messages ******************/
+#message-field-div{
+    position: relative;
+    height: calc(100vh - 74px)
+}
+#message-field{
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+}
+#message-field input{
+    border-radius: 10px;
+ 
+}
+#messages ul{
+    margin-bottom: 25px;
+}
+.msg-li{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* width: 50%; */
+    margin-top: 20px;
+    margin-left: 5px;
+    border-radius: 20px !important;
+}
+.align-left{
+    width: 50%;
+}
+.align-right{
+    margin-left: auto;
+    width: 50%;
+}
+.align-right li{
+    background-color: #c7ecee;
+}
+#messages{
+    height : calc(100% - 38px);
+    overflow: auto;
+}
+.msg-li span{
+    color: grey;
+    font-weight: bold;
+}
+
+
+
+/****************** Inbox ************************/
+#users-list{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.inbox-list{
+    display: flex;
+    justify-content: space-between;
+}
+.inbox-list{
+    cursor : pointer;
+}
+
+
+/****************** Media queries ********************/
+
+@media (max-width : 650px){
+    #signin-form-div , #signup-form-div{
+        width: 90%;
+    }
+    #ad-div{
+        width: 60%;
+    }
+    #search-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #search-div input[type="text"] , #search-div select{
+        width: 90%;
+    }
+    #search-div input[type="button"]{
+        width: 100px;
+        margin-top: 0;
+        align-self: flex-start;
+        margin-left: 25px;
+    }
+    .img-width{
+        width: 45%;
+    }
+}
+
+@media (max-width : 750px){
+    /* #ad-img-div{
+        height: 500px;        
+    }
+    #ad-img-div img{
+        width: 300px;
+    } */
+    #ads{
+        width: 100%;
+        margin-left: 0;        
+    }
+    #offline-msg-div h2{
+        font-size: 20px;
+    }
+    .align-left{
+        width: 70%;
+    }
+    .align-right{
+        width: 70%;
+    }    
+}
+@media (max-width : 500px){
+    #ad-div{
+        width: 100%;
+    }
+    #custom-nav{
+        width : 100%;
+    }
+    h1{
+        font-size: 32px;
+    }
+    body{
+        font-size: 14px;
+    }
+    .img-width{
+        width: 55%;
+    }
+    .block-btn{
+        display: flex;
+        flex-direction: column;
+    }
+    .block-btn button:first-child{
+        margin-bottom: 8px;
+    }
+    #offline-msg-div h2{
+        font-size: 17px;
+    }
+    .align-left{
+        width: 80%;
+    }
+    .align-right{
+        width: 80%;
+    }    
+}

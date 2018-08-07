@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Firbase init -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+
+    <!-- Bootstrap StyleShet -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- manifest -->
+    <link rel="manifest" href="manifest.json">
+    <style>
+        body {
+            background-image: url("images/bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="signin-form-div">
+        <h1 class="text-center">Login</h1>
+        <div id="signin-form">
+            <div class="form-group">
+                <input type="text" class="form-control" id="signin-email" placeholder="Email..">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="signin-pwd" placeholder="Password..">
+            </div>
+            <div class="form-group">
+                <input type="button" value="SignIn" class="btn btn-success" onClick="signInUser()">
+                <p class="link">Don't Have Account
+                    <a href="signup.html">Signup here</a>
+                </p>
+            </div>
+
+        </div>
+        <div id="error-div">
+            <p id="error"></p>
+        </div>
+    </div>
+
+    <div id="loader-div">
+        <img src="images/loader.png" alt="loader" id="loader" width="50px">
+        <p id="loader-text"></p>
+    </div>
+    <script src="js/firebase-init.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

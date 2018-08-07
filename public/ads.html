@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homepage</title>
+
+    <!-- Firbase init -->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+
+    <!-- Bootstrap StyleShet -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- manifest -->
+    <link rel="manifest" href="manifest.json">
+
+</head>
+
+<body onLoad="fetchData()">
+
+    <!-- Header -->
+
+    <div id="header">
+        <h1>E-Commerce</h1>
+        <button class="btn btn-danger" onClick="showNav()">Menu</button>
+    </div>
+
+    <!-- Navbar -->
+
+    <nav id="custom-nav">
+        <span style="float: right; cursor: pointer;">
+            <img src="images/close.png" alt="close-icon" id="close-icon" onClick="navClose()" width="30px">
+        </span>
+
+        <!-- Print UserName -->
+        <p id="user"></p>
+
+        <ul id="nav-links">
+            <li>
+                <a class="btn btn-info link" href="ads.html">Home </a>
+            </li>
+            <li>
+                <a href="add-ads.html" class="btn btn-success">Submit your Ad
+                </a>
+            </li>
+            <li>
+                <a href="user-ads.html" class="btn btn-success">See Your Ads
+                </a>
+            </li>
+            <li>
+                <a class="btn btn-info link" href="inbox.html">Inbox </a>
+            </li>
+            <li>
+                <a class="btn btn-info link" href="offline-ads.html">Offline Ads </a>
+            </li>
+            <li>
+                <button class="btn btn-danger" onClick="signOutUser()">logOut
+                </button>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Search Input -->
+    <div id="search-div" class="my-3 input-group">
+        <select class="form-control" id="select-input">
+            <option value="cat">Category</option>
+            <option value="product">Product Name</option>
+        </select>
+        <input type="text" class="form-control" id="serach-input">
+        <input type="button" value="Search" class="btn btn-sucess" onClick="searchFunc()">
+    </div>
+    <div id="search-result-div"></div>
+
+    <!-- Shows Ads -->
+    <div class="container my-4">
+        <div class="row" id="ads-container"></div>
+    </div>
+
+    <!-- For Showing Message -->
+    <div id="message-box"> </div>
+
+    <!-- Loader -->
+    <div id="loader-div">
+        <img src="images/loader.png" alt="loader" id="loader" width="50px">
+        <p id="loader-text"></p>
+    </div>
+
+    
+    <div id="offline-msg-div">
+        <h2 id="offline-msg">Your Are Offline But You Can Se Your Offline Saved Ads</h2>
+        <a href="offline-ads.html" class="btn btn-danger">See Offline Ads</a>
+    </div>
+    <script src="js/firebase-init.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/ads.js"></script>
+</body>
+
+</html>

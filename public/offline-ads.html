@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<!-- Firbase init -->
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+
+<!-- Bootstrap StyleShet -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- Custom StyleSheet -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- manifest -->
+<link rel="manifest" href="manifest.json">
+
+
+<body>
+
+    <div id="header">
+        <h1>E-Commerce</h1>
+        <button class="btn btn-danger" onClick="showNav()">Menu</button>
+    </div>
+    <nav id="custom-nav">
+        <span style="float: right; cursor: pointer;">
+            <img src="images/close.png" alt="close-icon" id="close-icon" onClick="navClose()" width="30px">
+        </span>
+        <p id="user"></p>
+
+        <ul id="nav-links">
+            <li>
+                <a class="btn btn-info link" href="ads.html">Home </a>
+            </li>
+            <li>
+                <a href="add-ads.html" class="btn btn-success">Submit your Ad
+                </a>
+            </li>
+            <li>
+                <a href="user-ads.html" class="btn btn-success">See Your Ads
+                </a>
+            </li>
+
+            <li>
+                <a class="btn btn-info link" href="inbox.html">Inbox </a>
+            </li>
+            <li>
+                <a class="btn btn-info link" href="offline-ads.html">See Your Offline Ads </a>
+            </li>
+            <li>
+                <button class="btn btn-danger" onClick="signOutUser()">logOut
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <h1 class="text-center">Offline Saved Ads</h1>
+    <div id="ads-details"></div>
+
+    <div id="message-box"></div>
+    <script src="js/firebase-init.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/offline.js"></script>
+</body>
+
+</html>
